@@ -1,0 +1,8 @@
+name: HostilePassives
+author: kixmc
+version: 1.0.0
+main: com.kixmc.hostilepassives.HostilePassives
+api-version: 1.19
+commands:
+  hp:
+    description: Reload the plugin

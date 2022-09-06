@@ -1,0 +1,68 @@
+# -------------------------------------------------------------------------------
+# Hostile passives configuration
+# -------------------------------------------------------------------------------
+# NOTES
+# * The server cannot be on peaceful difficulty for this plugin to work.
+# * Water & flying passives are not currently supported
+# * Some unique mob behavior may be limited or broken by the plugin while the entity is hostile, ex. frogs or rabbits hopping
+# * This plugin makes select passive entities hostile towards players. They will not be hostile towards other mobs or animals.
+# -------------------------------------------------------------------------------
+# CONFIG GUIDE
+#
+# damage: 1 = half a heart
+#
+# speed-multiplier only takes effect when the entity is hostile, otherwise they will have normal speed. 1 = default speed
+#
+# sync-frequency: how often in ticks the hostile passive is synced to its controller entity. You should only increase this if you have lag from the plugin. Values above 5 are not recommended as they will make the entity appear to be teleporting toward you instead of walking. Note that high speed multipliers will amplify this effect.
+#
+# check-frequency: how often in ticks entities nearby players are checked to become tracked or untracked by the plugin (aka become hostile or return to their normal state). You should only increase this if you have lag from the plugin. Values below 20 are generally redundant
+#
+# check-range: the distance around players to check for entities to become tracked or untracked by the plugin
+#
+# -------------------------------------------------------------------------------
+
+settings:
+  sync-frequency: 1
+  check:
+    frequency: 40
+    range: 30
+  exempt-permission-scheme: hp.exempt.{MOB}
+  exempt-all-permission: hp.exempt.all
+
+entities:
+
+  chicken:
+    damage: 2
+    speed-multiplier: 1
+    exempt-uuids:
+      - "069a79f4-44e9-4726-a5be-fca90e38aaf5"
+
+  cow:
+    damage: 6
+    speed-multiplier: 1
+    exempt-uuids: []
+
+  sheep:
+    damage: 3
+    speed-multiplier: 1
+    exempt-uuids: []
+
+  pig:
+    damage: 3
+    speed-multiplier: 1
+    exempt-uuids: []
+
+  donkey:
+    damage: 5
+    speed-multiplier: 1
+    exempt-uuids: []
+
+  horse:
+    damage: 8
+    speed-multiplier: 1
+    exempt-uuids: []
+
+  mule:
+    damage: 4
+    speed-multiplier: 1
+    exempt-uuids: []
